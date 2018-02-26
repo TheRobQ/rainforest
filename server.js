@@ -12,10 +12,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const follow = (url) =>{
-  console.log(url);
   axios.get(url)
     .then(function (response) {
-      console.log(response.data);
       if(response.data.hasOwnProperty('follow')){
         let url = response.data.follow.replace('challenge?', 'challenge.json?')
         follow(url)
