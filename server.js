@@ -20,7 +20,7 @@ const follow = (url) =>{
         let url = response.data.follow.replace('challenge?', 'challenge.json?')
         follow(url)
       }else{
-      console.log(response);
+      console.log(response.data);
     }
     })
     .catch(function (error) {
