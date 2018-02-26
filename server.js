@@ -1,6 +1,5 @@
 "use strict"
 const  express = require('express')
-const cookieParser = require('cookie-parser');
 const bodyParser  = require('body-parser');
 const port = 8800
 const stat = () => console.log(`listening on ${port}`);
@@ -11,7 +10,6 @@ app.disable('x-powered-by')
 app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
 
 const follow = (url) =>{
   console.log(url);
